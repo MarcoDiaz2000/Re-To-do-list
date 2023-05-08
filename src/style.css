@@ -44,9 +44,8 @@ h1 {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-top: 10px;
-  margin: 0%;
+  margin: 0px;
 }
-
 .strikethrough {
   text-decoration: line-through;
   color: #f33232;
