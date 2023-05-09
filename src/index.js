@@ -12,7 +12,7 @@ function renderTasks() {
   const todoList = document.getElementById('todo-list');
   todoList.innerHTML = '';
   tasks.sort((a, b) => a.index - b.index).forEach((task) => {
-      const listItem = document.createElement('li');
+    const listItem = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
