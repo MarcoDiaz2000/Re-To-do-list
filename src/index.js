@@ -72,7 +72,6 @@ function renderTasks() {
     });
     trashIcon.addEventListener('click', (event) => {
       event.stopPropagation();
-      console.log('Trash icon clicked:', task.index);
       deleteTask(task.index, tasks);
       renderTasks();
       saveLocalStorage();
@@ -86,7 +85,6 @@ function clearTasks() {
 
 function loadLocalStorage() {
   const storedTasks = localStorage.getItem('tasks');
-  console.log('storedTasks:', storedTasks);
   if (storedTasks) {
     return JSON.parse(storedTasks);
   }
@@ -118,6 +116,5 @@ addTaskForm.addEventListener('submit', (event) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   tasks = loadLocalStorage() || tasks;
-  console.log('tasks after loading from localStorage:', tasks);
   renderTasks();
 });
